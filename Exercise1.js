@@ -1,0 +1,63 @@
+import React from 'react';
+import {View, Text, FlatList, TouchableOpacity, StyleSheet} from 'react-native';
+
+const datasource = [
+    {key: 'a'},
+    {key: 'b'},
+    {key: 'c'},
+    {key: 'd'},
+    {key: 'e'},
+    {key: 'f'},
+    {key: 'g'},
+    {key: 'h'},
+    {key: 'i'},
+    {key: 'j'},
+    {key: 'k'},
+    {key: 'l'},
+    {key: 'm'},
+    {key: 'n'},
+    {key: 'o'},
+    {key: 'p'},
+    {key: 'q'},
+    {key: 'r'},
+    {key: 's'},
+    {key: 't'},
+    {key: 'u'},
+    {key: 'v'},
+    {key: 'w'},
+    {key: 'x'},
+    {key: 'y'},
+    {key: 'z'},
+];
+
+const Exercise1 = () => {
+    const renderItem = ({item}) => {
+        return (
+            <TouchableOpacity style={styles.container}>
+                <Text style={styles.textStyle}>{item.key}</Text>
+            </TouchableOpacity>
+        );
+    };
+
+    return (
+        <View style={{flex: 1}}>
+            <FlatList
+                data={datasource}
+                renderItem={renderItem}
+            />
+        </View>
+    );
+};
+
+const styles = StyleSheet.create({
+    container: {
+        borderWidth: 1,
+    },
+    textStyle: {
+        fontSize: 15,
+        margin: 10,
+        textAlign: 'left',
+    },
+});
+
+export default Exercise1;

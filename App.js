@@ -7,7 +7,7 @@ import Exercise1 from './Exercise1';
 const L09App = () => {
     return (
         <View style={{flex: 1, marginTop: 30}}>
-            <Exercise1 />
+            <Exercise2 />
         </View>
     );
 };
